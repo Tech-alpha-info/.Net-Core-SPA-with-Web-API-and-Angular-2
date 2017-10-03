@@ -1,0 +1,44 @@
+<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' [routerLink]="['/home']">TODO SPA</a>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/home']">
+                        <span class='glyphicon glyphicon-home'></span> Home
+                    </a>
+                </li>
+            
+              
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/editgrid']">
+                        <span class='glyphicon glyphicon-edit'></span> Edit Grid
+                    </a>
+                </li>  
+
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/grid']">
+                        <span class='glyphicon glyphicon-th-list'></span> Select Grid
+                    </a>
+                </li>  
+           
+              
+                <!--<li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/anime']">
+                        <span class='glyphicon glyphicon-link'></span> Anime
+                    </a>
+                </li>-->  
+            </ul>
+        </div>
+    </div>
+</div>

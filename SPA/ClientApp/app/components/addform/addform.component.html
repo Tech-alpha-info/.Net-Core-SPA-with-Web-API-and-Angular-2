@@ -1,0 +1,56 @@
+
+
+
+<div class="row" style="padding-top:30px;">
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading text-center">To dos</div>
+    <div class="panel-body">
+
+
+        <input type="button" class="button" value="Add New" [disabled]="expanded" (click)="clickAddNew()">
+        <input type="button" class="button" value="Cancel" [disabled]="!expanded" (click)="clickCancel()">
+
+
+        <div [@SliderAnimation]='state' class="slider-panel">
+            <div class="table-bordered">
+                <form [formGroup]="addForm" (ngSubmit)="addPost(addForm.value)">
+
+                    <div class="form-container">
+                        <div class="row columns">
+                            <h4>Add New To Do Item</h4>
+                            <label>
+                                Name
+                                <input type="text" formControlName="name" class="form-control">
+                            </label>
+                            <div class="alert" *ngIf="!addForm.controls['name'].valid && addForm.controls['name'].touched">{{ requiredAlert }}</div>
+
+
+                            <label>
+                                Details
+                                <textarea formControlName="details"></textarea>
+                            </label>
+                            <div class="alert" *ngIf="!addForm.controls['details'].valid && addForm.controls['details'].touched">You must specify details between 10 and 500 characters.</div>
+
+
+                            <label>
+                                Complete
+                                <input type="checkbox" formControlName="complete" value="1">
+                            </label>
+
+                            <input type="submit" class="button expanded" value="Save" [disabled]="!addForm.valid">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br />
+
+        <div>
+            <router-outlet name='child1'></router-outlet>
+        </div>
+
+
+    </div>
+</div>

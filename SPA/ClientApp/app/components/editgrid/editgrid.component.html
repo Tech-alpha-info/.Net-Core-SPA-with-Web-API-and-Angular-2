@@ -1,0 +1,86 @@
+
+
+
+<div>
+
+    <div *ngIf="gearsDisplay" id="LoadingSpinner">
+        
+            <img src="/Content/image/gears.gif" height="20" class="well2" />
+
+    </div>
+   
+  
+            <div style='float:left;width:100%; padding-top:5px; border:1px solid #cccccc;'>
+              
+                <ngx-datatable #mydatatable
+                               class="material"
+                               style="width:100%;"
+                               [headerHeight]="50"
+                               [limit]="5"
+                               [footerHeight]="50"
+                               [rowHeight]="'auto'"
+                               [rows]="rows">
+                    <ngx-datatable-column name="Id">
+                        <ng-template ngx-datatable-cell-template let-value="value">
+                            {{value}}
+                        </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-column name="Name">
+                        <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                            <span title="Double click to edit"
+                                  (dblclick)="editing[rowIndex + '-name'] = true"
+                                  *ngIf="!editing[rowIndex + '-name']">
+                                {{value}}
+                            </span>
+                            <input autofocus
+                                   (blur)="updateValue($event, 'name', rowIndex)"
+                                   *ngIf="editing[rowIndex+ '-name']"
+                                   type="text"
+                                   [value]="value" />
+                        </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-column name="Details">
+                        <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
+                            <span title="Double click to edit"
+                                  (dblclick)="editing[rowIndex + '-details'] = true"
+                                  *ngIf="!editing[rowIndex + '-details']">
+                                {{value}}
+                            </span>
+                            <input autofocus
+                                   (blur)="updateValue($event, 'details', rowIndex)"
+                                   *ngIf="editing[rowIndex+ '-details']"
+                                   type="text"
+                                   [value]="value" />
+                        </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-column name="IsComplete">
+                        <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row" let-value="value">
+                            <span title="Double click to edit"
+                                  (dblclick)="editing[rowIndex + '-iscomplete'] = true"
+                                  *ngIf="!editing[rowIndex + '-iscomplete']">
+                                {{value}}
+                            </span>
+                            <select *ngIf="editing[rowIndex + '-iscomplete']"
+                                    (change)="updateValue($event, 'iscomplete', rowIndex)"
+                                    [value]="value">
+                                <option value="false">false</option>
+                                <option value="true">true</option>
+                            </select>
+                        </ng-template>
+                    </ngx-datatable-column>
+                    <ngx-datatable-column name="" title="">
+                        <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row">
+                            <input type="button" class="btn btn-primary" value="Remove" (click)="delete($event, rowIndex)" />
+                           
+                        </ng-template>
+                    </ngx-datatable-column>
+                </ngx-datatable>
+            </div>
+
+     
+
+  
+</div>

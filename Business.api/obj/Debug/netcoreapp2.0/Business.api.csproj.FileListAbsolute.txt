@@ -1,0 +1,11 @@
+C:\CODE\CORE\CORE2\Business.api\bin\Debug\netcoreapp2.0\Business.api.deps.json
+C:\CODE\CORE\CORE2\Business.api\bin\Debug\netcoreapp2.0\Business.api.runtimeconfig.json
+C:\CODE\CORE\CORE2\Business.api\bin\Debug\netcoreapp2.0\Business.api.runtimeconfig.dev.json
+C:\CODE\CORE\CORE2\Business.api\bin\Debug\netcoreapp2.0\Business.api.dll
+C:\CODE\CORE\CORE2\Business.api\bin\Debug\netcoreapp2.0\Business.api.pdb
+C:\CODE\CORE\CORE2\Business.api\obj\Debug\netcoreapp2.0\Business.api.csproj.CoreCompileInputs.cache
+C:\CODE\CORE\CORE2\Business.api\obj\Debug\netcoreapp2.0\Business.api.AssemblyInfoInputs.cache
+C:\CODE\CORE\CORE2\Business.api\obj\Debug\netcoreapp2.0\Business.api.AssemblyInfo.cs
+C:\CODE\CORE\CORE2\Business.api\obj\Debug\netcoreapp2.0\Business.api.dll
+C:\CODE\CORE\CORE2\Business.api\obj\Debug\netcoreapp2.0\Business.api.pdb
+C:\CODE\CORE\CORE2\Business.api\bin\Debug\netcoreapp2.0\Business.api.xml

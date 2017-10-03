@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SPA</title>
+    <base href="~/" />
+
+    <script src="~/scripts/web-animations.min.js"></script>
+    @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>*@
+   
+    <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="~/content/grid.css" />
+    @*<link rel="stylesheet" type="text/css" href="~/node_modules/angular2-toaster/toaster.css" />*@
+
+  
+    <link href="/bundles/ng2-toastr.min.css" rel="stylesheet" />
+    <script src="/bundles/ng2-toastr.min.js"></script>
+    <script src="~/scripts/Site.js"></script>
+</head>
+<body>
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+
+    
+</body>
+</html>
